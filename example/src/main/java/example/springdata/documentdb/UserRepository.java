@@ -26,6 +26,6 @@ public interface UserRepository extends DocumentDbRepository<User, String> {
 
     List<User> findByName(String firstName);
 
-    List<User> findByEmail(String emailAddress);
+    List<User> findByEmailAndAddress(String email, Address address);
 }
 
