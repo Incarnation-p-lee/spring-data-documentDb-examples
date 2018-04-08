@@ -28,11 +28,11 @@ import org.springframework.data.annotation.Id;
 public class Address {
 
     @Id
-    String postalCode;
+    private String postalCode;
 
-    String street;
+    private String street;
 
-    String city;
+    private String city;
 
     @Override
     public String toString() {
