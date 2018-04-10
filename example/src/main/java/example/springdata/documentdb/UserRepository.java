@@ -17,11 +17,13 @@
 package example.springdata.documentdb;
 
 import com.microsoft.azure.spring.data.documentdb.repository.DocumentDbRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@RepositoryRestResource(collectionResourceRel = "user", path = "user")
 public interface UserRepository extends DocumentDbRepository<User, String> {
 
     List<User> findByName(String firstName);
